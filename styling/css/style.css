@@ -1,0 +1,601 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Styling */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 32px;
+  font-weight: 700;
+  color: #e63946;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #e63946;
+  transform: scale(1.1);
+}
+
+/* Hamburger Menu Styling */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: transform 0.3s ease;
+}
+
+/* Mobile View for Nav Links */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 8px 8px;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li a {
+    padding: 10px 0;
+    display: block;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+
+/* Hero Section Styling */
+.hero {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+/* Hero Section Background Image */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Ensures the image is behind the content */
+}
+
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  padding: 12px 30px;
+  font-size: 1rem;
+  background-color: #e63946;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #d62828;
+  transform: scale(1.05);
+}
+
+/* Responsive Design for Hero Section */
+@media (max-width: 768px) {
+  .hero {
+    height: 80vh;
+    padding: 0 10px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+/* Menu Section Styling */
+.menu {
+  padding: 50px 20px;
+  position: relative;
+}
+
+/* Menu Header Styling (Centered at the top) */
+.menu-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.menu-header h2 {
+  font-family: 'Dancing Script', 'cursive';
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.menu-header p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Menu Container using Flexbox for Image and Content Layout */
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Menu Image Styling (Left Side) */
+.menu-image {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.menu-image-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Menu Content Styling (Right Side) */
+.menu-content {
+  font-family: 'Roboto', sans-serif;
+  flex: 2;
+  text-align: left;
+  max-width: 700px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .menu-categories {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Individual Menu Category Styling */
+.menu-category {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-category:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Category Title Styling */
+.menu-category h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Category Description Styling */
+.menu-category p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Category Price Styling */
+.menu-category .price {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .menu-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu-image {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .menu-content {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-header h2 {
+    font-size: 2rem;
+  }
+
+  .menu-header p {
+    font-size: 1rem;
+  }
+}
+
+
+/* About Section Styling */
+.about {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+/* Flexbox Layout for About Section */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Content Styling (Left Side) */
+.about-content {
+  flex: 1.5;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  max-width: 600px;
+}
+
+.about-content h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/* Image Styling (Right Side) */
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content {
+    padding: 0;
+  }
+
+  .about-image {
+    margin-top: 20px;
+  }
+}
+
+
+/* Contact Section Styling */
+.contact {
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+/* Contact Container */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+/* Contact Form Styling (Left Side) */
+.contact-form {
+  flex: 1;
+  max-width: 45%;
+}
+
+.contact-form form {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Contact Information Styling (Right Side) */
+.contact-info {
+  margin: 0;
+  flex: 1;
+  font-family: 'Montserrat', sans-serif;
+  max-width: 45%;
+}
+
+.contact-info h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info ul li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info ul li i {
+  font-size: 1.2rem;
+  color: #e74c3c;
+  margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-form,
+  .contact-info {
+    max-width: 100%;
+  }
+
+  .contact-info {
+    margin-top: 20px;
+  }
+}
+
+/* Footer Styling */
+#footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-logo h3 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  font-size: 1rem;
+  color: #bbb;
+}
+
+.social-media {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #e74c3c;
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-media {
+    margin-top: 20px;
+  }
+}
+
+/* Section Styles */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+  color: #e63946;
+}
